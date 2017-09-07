@@ -1,0 +1,53 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700';
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "_base.scss"; 
+@import "_panels.scss";
+@import "_labels-badges.scss";
+@import "_buttons.scss";
+@import "_top-bar.scss";
+@import "_dropdowns.scss";
+@import "_left-nav.scss";
+@import "_right-sidebar.scss";
+@import "_page-header.scss";
+@import "_widgets.scss";
+@import "_form-elements.scss";
+@import "_charts.scss";
+@import "_tables.scss";
+@import "_mailbox.scss";
+@import "_progress-bar.scss";
+@import "_misc.scss";
+@import "_blog.scss";
+@import "_pricing.scss";
+@import "_calendar.scss";
+@import "_gallery.scss";
+@import "_timeline.scss";
+@import "_modal-popups.scss";
+@import "_tabs-accorion.scss";
+@import "_pagination.scss";
+@import "_layout-horizontal.scss";
+@import "_jquery-ui-custom.scss";
+@import "_alertify.scss";
+@import "_responsive.scss";
+@import "_intro.scss";
+.footer {
+    height: 40px;
+    bottom: 0px;
+    left: 0;
+    line-height: 40px;
+    position: absolute;
+    padding: 0px 15px;
+    width: 100%;
+    background-color: #101823;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img {
+    width: 100%;
+}
+.jvectormap-container{
+    background: transparent!important;
+}
+.dd-handle, .dd-handle:hover,.dd3-content {
+    background:$bg-dark;
+    border-color: rgba(255,255,255,0.2);
+}

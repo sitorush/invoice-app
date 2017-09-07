@@ -1,0 +1,24 @@
+/*
+Bootstrap pagination
+*/
+.pagination>li>a, .pagination>li>span{
+    color: $bg-primary;
+    background: transparent;
+}
+.pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover {
+    color: #aeaeae;
+    cursor: not-allowed;
+    background-color: transparent;
+    border-color:  rgba(255,255,255,0.1);
+}
+.pagination>li>a, .pagination>li>span{
+        background-color: transparent;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: $bg-primary;
+    border-color: $bg-primary;
+}

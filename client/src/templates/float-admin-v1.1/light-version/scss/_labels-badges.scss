@@ -1,0 +1,113 @@
+/*
+Label & badges
+*/
+.label{
+    font-weight: 400;
+    font-size: 10px;
+    display: inline;
+    vertical-align: middle;
+}
+.label-primary{
+    background-color: $bg-primary;
+}
+.label-danger{
+    background-color: $bg-danger;
+}
+.label-warning{
+    background-color: $bg-warning;
+}
+.label-info{
+    background-color: $bg-info;
+}
+.label-success{
+    background-color: $bg-success;
+}
+.label-default{
+    background-color: $bg-default;
+    color: #333;
+}
+.label-indigo{
+    background-color: $bg-indigo;
+}
+.label-teal{
+    background-color: $bg-teal;
+}
+
+
+/**badge**/
+.badge:empty{
+    padding: 0px;
+    width: 6px;
+    height: 6px;
+    @include border-radius(3px);
+    min-width: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+.badge{
+    font-weight: 400;
+    padding: 2px 5px;
+    font-size: 10px;
+}
+.badge-primary{
+    background-color: $bg-primary;
+}
+.badge-danger{
+    background-color: $bg-danger;
+}
+.badge-warning{
+    background-color: $bg-warning;
+}
+.badge-info{
+    background-color: $bg-info;
+}
+.badge-success{
+    background-color: $bg-success;
+}
+.badge-default{
+    background-color: $bg-default;
+    color: #333;
+}
+.badge-indigo{
+    background-color: $bg-indigo;
+}
+.badge-teal{
+    background-color: $bg-teal;
+}
+
+/**circle**/
+.circle {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 500px;
+    margin: 0 .5em;
+    background-color: #f5f5f5;
+    vertical-align: baseline;
+    border: 2px solid transparent;
+}
+.circle-primary{
+    background: $bg-primary;
+}
+.circle-success{
+    background: $bg-success;
+}
+.circle-info{
+    background: $bg-info;
+}
+.circle-warning{
+    background: $bg-warning;
+}
+.circle-danger{
+    background: $bg-danger;
+}
+.circle-teal{
+    background: $bg-teal;
+}
+.circle-indigo{
+    background: $bg-indigo;
+}
+.circle-lg{
+    width:11px;
+    height: 11px;
+}

@@ -1,0 +1,26 @@
+/*
+Page header style
+*/
+
+.page-header{
+    margin: 0px;
+    margin-left: -30px;
+    margin-right: -30px;
+    padding-left:30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom:30px;
+    
+    background-color:#fefefe;
+    h4{
+        margin: 2px 0;
+        font-weight: 400;
+    }
+    .breadcrumb{
+        margin: 0px;
+        background: transparent;
+        padding: 0;
+        text-transform: capitalize;
+    }
+}

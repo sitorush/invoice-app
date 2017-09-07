@@ -1,0 +1,106 @@
+/*
+Dropdown styles
+*/
+
+.dropdown-menu,.note-editor .dropdown-menu{
+ background-color:$bg-dark;
+ border-color: rgba(255,255,255,0.1);
+padding:0;
+@include box-shadow(none);
+    >li{
+        i{
+            display: inline-block;
+            margin-right: 5px;
+            vertical-align: middle;
+            font-size: 15px;
+          
+        }
+        >a{
+             color:#aeaeae;
+            padding:7px 20px;
+            &:hover{
+                color: $bg-primary;
+                background: transparent;
+            }
+        }
+    }
+}
+ul.dropdown-menu.top-dropdown {
+    right: 0;
+    left: auto;
+}
+.dropdown-menu .divider{
+  background-color: rgba(255,255,255,0.1);   
+}
+.dropdown-menu.lg-dropdown{
+    min-width: 280px;
+}
+.dropdown-header {
+    padding: 7px 20px;
+    color: $bg-primary;
+    font-size: 13px;
+    font-weight: 500;
+}
+.notification-list a{
+    display: block;
+    border-top:1px solid rgba(255,255,255,0.1);
+    display: block;
+    position: relative;
+    padding: 6px 12px 6px 75px;
+    i{
+        display: block;
+        float: left;
+        width: 50px;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        font-size: 25px;
+    }
+    span{
+        display: block;
+        line-height: 16px;
+        font-size: 13px;
+        &.notification-icon{
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            width: 50px;
+            height: 50px;
+            margin: -25px 12px 0 0;
+            font-size: 14px;
+            line-height: 50px;
+            text-align: center;
+            i{
+                display: block;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                font-size: 28px;
+                display: block;
+                line-height: 40px;
+            }
+        }
+        &.notification-title{
+            color: #fff;
+            padding-bottom: 1px;
+            font-weight: 500;
+        }
+        &.notification-description{
+            padding-bottom: 3px;
+            color: #aeaeae;
+            font-size: 12px;
+        }
+        &.notification-time{
+            color: #aeaeae;
+            font-style: italic;
+            font-size: 11px;
+        }
+    }
+    &:hover{
+        background-color: rgba(255,255,255,0.1);
+    }
+}
+.panel-dropdown{
+    right:0;
+    left: auto;
+}

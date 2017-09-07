@@ -1,0 +1,142 @@
+/*
+Panels css
+*/
+.panel{
+    margin-bottom: 30px;
+    border:0px;
+}
+.panel,.panel-heading{
+    @include border-radius(0px);
+}
+.panel-heading{
+     @include border-radius(0px);
+        padding: 10px 15px;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size:15px;
+}
+.panel-group .panel{
+    @include border-radius(0px);
+}
+.panel-body{
+    position: relative;
+}
+/**panel colors**/
+.panel-primary {
+    border-color: $bg-primary;
+}
+.panel-default{
+    border-color: #e1e8ed;
+}
+.panel-default>.panel-heading {
+      background-color: transparent;
+      border-bottom:0px;
+}
+.panel-default .panel-heading a.collapsed{
+    color: #666;
+}
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: $bg-primary;
+    border-color:  $bg-primary;
+    a{
+        color: #fff;
+    }
+}
+
+.panel-success {
+    border-color: $bg-success;
+}
+.panel-success>.panel-heading {
+    color: #fff;
+    background-color: $bg-success;
+    border-color:  $bg-success;
+    a{
+        color: #fff;
+    }
+}
+.panel-info {
+    border-color: $bg-info;
+}
+.panel-info>.panel-heading {
+    color: #fff;
+    background-color: $bg-info;
+    border-color:  $bg-info;
+    a{
+        color: #fff;
+    }
+}
+.panel-warning {
+    border-color: $bg-warning;
+}
+.panel-warning>.panel-heading {
+    color: #fff;
+    background-color: $bg-warning;
+    border-color:  $bg-warning;
+    a{
+        color: #fff;
+    }
+}
+.panel-danger {
+    border-color: $bg-danger;
+}
+.panel-danger>.panel-heading {
+    color: #fff;
+    background-color: $bg-danger;
+    border-color:  $bg-danger;
+    a{
+        color: #fff;
+    }
+}
+.panel-indigo {
+    border-color: $bg-indigo;
+}
+.panel-indigo>.panel-heading {
+    color: #fff;
+    background-color: $bg-indigo;
+    border-color:  $bg-indigo;
+    a{
+        color: #fff;
+    }
+}
+.panel-teal {
+    border-color: $bg-teal;
+}
+.panel-teal>.panel-heading {
+    color: #fff;
+    background-color: $bg-teal;
+    border-color:  $bg-teal;
+    a{
+        color: #fff;
+    }
+}
+.panel-search{
+    position: relative;
+    width:170px;
+    float:right;
+    .form-control{
+        @include box-shadow(none);
+        @include border-radius(2px);
+        height: 24px;
+        font-size: 12px;
+        font-weight: 300;
+    }
+    span{
+        position: absolute;
+        right: 10px;
+        top: 7px;
+        border: 0px;
+        font-size: 11px;
+    }
+}
+
+.panel-footer {
+    padding: 10px 15px;
+        background: #fff;
+}
+
+/**wells*/
+.well-default{
+    @include box-shadow(none);
+    background: #fff;
+}

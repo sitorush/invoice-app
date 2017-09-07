@@ -1,0 +1,49 @@
+/*
+Tables style
+*/
+
+
+.table > thead > tr > th {
+    border-bottom: 1px solid #DDDDDD;
+    vertical-align: bottom;
+}
+div.dataTables_paginate{
+    a{
+        display: inline-block;
+        padding: 1px 10px;
+        font-size: 13px;
+        border:1px solid #eee;
+        color: #666;
+        margin: 1px;
+        cursor:pointer;
+        &.disabled{
+            cursor: not-allowed;
+        }
+        &:hover,&.current{
+            background: #eee;
+        }
+    }
+}
+@media(min-width:768px){
+    .dataTables_length,.dataTables_info{
+    float: left;
+    width: 50%;
+}
+}
+div.dataTables_filter input {
+    margin-left: 0.5em;
+    display: inline-block;
+    box-shadow: none;
+    border: 1px solid #ddd;
+    &:focus{
+        outline: 0!important;
+    }
+}
+div.dataTables_length select{
+    box-shadow: none;
+    border: 1px solid #ddd;
+    &:focus{
+        outline: 0!important;
+    }
+}
+

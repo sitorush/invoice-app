@@ -1,0 +1,26 @@
+/*Fonts*/
+$primary-font:"Arimo", Helvetica, Arial, sans-serif;
+/**background-colors*/
+$bg-success:#4CAF50;
+$bg-blue:#03A9F4;
+$bg-danger:#F44336;
+$bg-warning:#FF7043;
+$bg-indigo:#7986CB;
+$bg-teal:#26A69A;
+$bg-info:#56afd7;
+$bg-default:#dde6e9;
+$bg-primary:#23b7e5;
+$light-primary:#8cb5f4;
+$bg-dark:#212121;
+.bg-light-dark{
+    background-color: rgba(0,0,0,0.1);
+}
+.white-bg{
+    background: #fff;
+}
+.bg-success{
+ background-color: $bg-success;
+}
+.border-success{
+    border-color: $bg-success;
+}

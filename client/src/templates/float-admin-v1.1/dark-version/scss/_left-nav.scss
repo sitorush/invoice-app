@@ -1,0 +1,141 @@
+/*
+Left side navigation style
+*/
+.float-navigation{
+    position: fixed;
+    left: 0;
+    top: 0px;
+    width: 220px;
+    height: 100%;
+    @include transition(margin-left 0.3s);
+    background-repeat: repeat;
+  z-index: 99;
+  background-color: #101823;
+}
+.light-navigation{
+    background-color: #fff;
+}
+.dark-navigation{
+    background-color: #263238;
+}
+body.nav-toggle .float-navigation{
+    margin-left: -220px;
+}
+.nav>li>a{
+    &:hover{
+        color: $bg-primary;
+    }
+}
+.metisMenu{
+    padding-bottom:30px;
+    padding-top:60px;
+    li{
+      border-left: 3px solid transparent;  
+    }
+    .arrow {
+        float: right;
+        line-height: 1.42857;
+        padding-top:2px;
+    }
+    .fa.arrow:before {
+                content: "\f106";
+    }
+    .active > a > .fa.arrow:before {
+             content: "\f107";
+    }
+}
+
+.metisMenu>li.nav-heading{
+  padding: 12px 12px;  
+     color: rgba(255,255,255,0.5);
+  font-weight: 400;
+  font-size: 12px;
+}
+.metisMenu.nav > li > a{
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+    font-weight:400;
+    font-size:13px;
+    &:hover,&:focus{
+        color: rgba(255,255,255,1);  
+        background: transparent;
+    }
+    i{
+        display: inline-block;
+        margin-right: 5px;
+        vertical-align: middle;
+        margin-top: -4px;
+        width: 20px;
+    }
+}
+.nav-second-level.nav li a,.nav-thrid-level.nav li a {
+    padding: 5px 10px 5px 10px;
+    text-transform: capitalize;
+    color: rgba(255,255,255,0.85);
+    font-weight:400;
+    &:hover,&:focus{
+        color: rgba(255,255,255,1);
+        background: transparent;
+    }
+}
+.nav-second-level.nav > li  > a{
+    padding-left: 40px;
+}
+.nav-third-level.nav > li > a {
+    padding-left: 50px; 
+}
+
+.metisMenu.nav > li.active{
+    background-color: rgba(0,0,0,0.1);
+    border-left-color:$bg-primary;
+    > a{
+        color: rgba(255,255,255,1);
+    }
+}
+.metisMenu.nav > li:last-child a{
+    border-bottom: 0px;
+}
+/**nano scroll customize**/
+.nano > .nano-pane{
+    width: 5px;
+    background: transparent;
+    > .nano-slider{
+            background: rgba(255,255,255,.2);
+    }
+}
+
+/**nav colors for light left navigation*/
+.light-navigation{
+  border-right:1px solid #e1e8ed;
+    .metisMenu>li.nav-heading{
+         color: #aeaeae;
+    }
+    .metisMenu.nav > li > a{
+        color: #818181;
+        &.bg-primary{
+            color:#fff;
+            &:hover{
+                color: #fff;
+            }
+        }
+        &:hover{
+          color:$bg-primary;
+      }
+    }
+    .metisMenu.nav > li.active{
+            background-color: #fefefe;
+        >a{
+            color:$bg-primary;
+        }
+    }
+    .nav-second-level.nav li a, .nav-thrid-level.nav li a{
+      color: #818181; 
+      &:hover{
+          color:$bg-primary;
+      }
+    }
+    .nano > .nano-pane > .nano-slider{
+        background: rgba(0, 0, 0, 0.05);
+    }
+}

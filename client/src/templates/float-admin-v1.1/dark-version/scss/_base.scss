@@ -1,0 +1,358 @@
+body{
+    font-family: $primary-font;
+    color: #aeaeae;
+    font-size: 13px;
+    font-weight: 400;
+    line-height:24px;
+    overflow-x: hidden;
+        background-color: #16202f;       
+}
+a{
+    text-decoration: none;
+    @include transition(all 0.3s);
+    color:$bg-info;
+    &:hover,&:focus{
+        text-decoration: none;
+        outline: 0!important;
+    }
+}
+a.text-muted:hover{
+    color: $bg-primary;
+}
+a blockquote{
+    color: #aeaeae;
+}
+blockquote{
+    font-style: italic;
+    border-left-color: rgba(255,255,255,0.2);
+}
+hr{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-top-color: rgba(255,255,255,0.1);
+}
+button:focus{
+    outline: 0!important;
+}
+h1,h2,h3,h4,h5,h6{
+    margin-top: 0px;
+    font-weight: 500;
+    color: #fff;
+}
+strong,b{
+    font-weight: 700!important;
+}
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.padding-20{
+    padding: 20px;
+}
+.no-padding{
+    padding: 0!important;
+}
+.no-margin{
+    margin: 0px!important;
+}
+.text-sm{
+    font-size: 12px!important;
+}
+.font-100{
+    font-weight: 100!important;
+}
+.font-300{
+    font-weight: 300!important;
+}
+.font-400{
+    font-weight: 400!important;
+}
+.font-500{
+    font-weight: 500!important;
+}
+.font-600{
+    font-weight: 600!important;
+}
+.font-700{
+    font-weight: 700!important;
+}
+.overflow-hidden{
+    overflow: hidden;
+}
+.pv-15{
+    padding-top: 15px!important;
+     padding-bottom: 15px!important;
+}
+.padding-5{
+    padding: 5px!important;
+}
+.mv-0{
+    margin: 0!important;
+}
+.mt-0{
+    margin-top: 0!important;
+}
+.bb {
+    border-bottom: 1px solid rgba(0,0,0,.12);
+}
+.br {
+    border-right: 1px solid rgba(0,0,0,.12);
+}
+.pv-0{
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+}
+.row-table {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+.row-table>[class*=col-] {
+    display: table-cell;
+    float: none;
+    table-layout: fixed;
+    vertical-align: middle;
+}
+.padding-0{
+    padding: 0px!important;
+}
+.font-lg{
+    font-size: 60px;
+    line-height: 60px;
+}
+/*background color*/
+.bg-light{
+      background-color: rgba(255,255,255,0.4)!important;
+    border-color: rgba(255,255,255,0.4)!important;
+}
+.bg-gray{
+      background-color: rgba(255,255,255,0.1)!important;
+    border-color: rgba(255,255,255,0.1)!important;
+}
+.bg-primary{
+    background-color: $bg-primary!important;
+    border-color: $bg-primary!important;
+    color: #fff;
+}
+.bg-blue{
+    background-color: $bg-blue!important;
+    border-color: $bg-blue!important;
+    color: #fff;
+}
+.bg-success{
+    background-color: $bg-success!important;
+    border-color: $bg-success!important;
+    color: #fff;
+}
+.bg-danger{
+    background-color: $bg-danger!important;
+    border-color: $bg-danger!important;
+    color: #fff;
+}
+.bg-info{
+    background-color: $bg-info!important;
+    border-color: $bg-info!important;
+    color: #fff;
+}
+.bg-teal{
+    background-color: $bg-teal!important;
+    border-color: $bg-teal!important;
+    color: #fff;
+}
+.bg-indigo{
+    background-color: $bg-indigo!important;
+    border-color: $bg-indigo!important;
+    color: #fff;
+}
+.bg-warning{
+    background-color: $bg-warning!important;
+    border-color: $bg-warning!important;
+    color: #fff;
+}
+.bg-dark{
+    background-color: $bg-dark!important;
+    border-color: $bg-dark!important;
+    color: #fff;
+}
+.bg-dark{
+    background-color: $bg-dark!important;
+    border-color: $bg-dark!important;
+    color: #fff;
+}
+.text-muted {
+    color: rgba(255,255,255,0.5);
+}
+.text-primary{
+    color: $bg-primary;
+}
+.text-success{
+    color: $bg-success;
+}
+.text-danger{
+    color: $bg-danger;
+}
+.text-warning{
+    color: $bg-warning;
+}
+.text-blue{
+    color: $bg-blue;
+}
+.text-info{
+    color: $bg-info;
+}
+.text-teal{
+    color: $bg-teal;
+}
+.text-indigo{
+    color: $bg-indigo;
+}
+/**alerts*/
+.close{
+    color: inherit;
+    opacity: 1;
+    text-shadow:none;
+}
+.alert-danger {
+    color:$bg-danger;
+    background-color: transparent;
+    border-color: $bg-danger;
+}
+.alert-warning {
+    color: $bg-warning;
+    background-color: transparent;
+    border-color: $bg-warning;
+}
+.alert-info {
+    color: $bg-info;
+    background-color: transparent;
+    border-color: $bg-info;
+}
+.alert-success {
+    color: $bg-success;
+    background-color: transparent;
+    border-color: $bg-success;
+}
+/**toastr notification color**/
+.jq-icon-info{
+    background-color: $bg-info;
+}
+.jq-icon-success{
+    background-color: $bg-success;
+}
+.jq-icon-warning{
+    background-color: $bg-warning;
+}
+.jq-icon-error{
+    background-color: $bg-danger;
+}
+.close-jq-toast-single {
+    position: absolute;
+    top: 1px;
+    right: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.jq-toast-single {
+    border-radius: 0px;
+    font-family: $primary-font;
+}
+.jq-toast-single h2{
+    font-family: $primary-font;
+}
+.jq-toast-loader {
+    height: 2px;
+    border-radius: 0px;
+}
+
+
+.dropcap:first-letter{
+    font-size: 18px;
+    font-weight: 700;
+    color: $bg-primary;
+    display: inline-block;
+}
+/***margins**/
+.margin-b-0{
+    margin-bottom: 0px;
+}
+.margin-b-5{
+    margin-bottom: 5px;
+}
+.margin-b-10{
+    margin-bottom: 10px;
+}
+.margin-b-20{
+    margin-bottom: 20px;
+}
+.margin-b-30{
+    margin-bottom: 30px;
+}
+.margin-b-40{
+    margin-bottom: 40px;
+}
+.margin-b-50{
+    margin-bottom: 50px;
+}
+.margin-r-5{
+    margin-right: 5px;
+}
+.margin-l-5{
+    margin-left: 5px;
+}
+.margin-tb-10{
+    margin: 10px 0;
+}
+.margin-tb-20{
+    margin: 20px 0;
+}
+.margin-tb-30{
+    margin: 30px 0;
+}
+.pad-v{
+    padding: 10px 0;
+}
+.fullwidth{
+    margin-left: -30px;
+    margin-right: -30px;
+    padding: 0px 30px;
+}
+
+.main-content{
+    min-height: 100vh;
+    padding: 30px;
+    padding-bottom: 40px;
+    padding-top: 60px;
+    position: relative;
+    margin-left: 220px;
+    @include transition(margin-left 0.3s);
+}
+body.nav-toggle .main-content{
+    margin-left: 0px;
+}
+ .infont a {
+    padding: 10px;
+    margin: 1px;
+    display: block;
+    color: #aeaeae;
+    i {
+    font-size: 25px;
+    display: block;
+}
+}
+.line-icons .item{
+    padding: 10px;
+    display: block;
+    span[aria-hidden="true"]{
+        display: block;
+        font-size: 20px;
+    }   
+}
+.slimScrollBar{
+    background: rgba(255,255,255,0.1)!important;
+}
+.dashboard-only-content{
+    padding-top: 30px;
+}

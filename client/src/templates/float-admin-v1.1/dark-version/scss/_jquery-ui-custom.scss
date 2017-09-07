@@ -1,0 +1,180 @@
+/*
+Jquery ui custom css file
+*/
+
+
+/**Select boxes**/
+.jquery-Ui-fieldset{
+    label{
+        display: block;
+    } 
+}
+.ui-widget{
+    font-family:$primary-font;
+}
+.ui-button{
+    background-color:transparent;
+}
+.ui-selectmenu-button.ui-button{
+    font-family:$primary-font;
+    &:focus{
+        outline: 0!important;
+    }
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+    border: 1px solid $bg-primary;
+    background: $bg-primary;
+}
+.ui-selectmenu-menu .ui-menu {
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.ui-menu .ui-menu-item>.ui-menu-item-wrapper>span.fa {
+    margin-right: 7px;
+    float: left;
+    position: relative;
+    top: 6px;
+    font-size: 14px;
+}
+.ui-helper-reset {
+    border: 0;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.ui-draggable-handle,.ui-sortable-handle {
+    -ms-touch-action: none;
+    touch-action: none;
+}
+.ui-tabs .ui-tabs-nav .ui-sortable-helper:not(.ui-tabs-active) .ui-tabs-anchor {
+    background-color: #fff;
+    border-bottom-color: #ddd;
+}
+.ui-sortable-helper{
+    top: inherit;
+}
+/**acoordions**/
+.ui-accordion .ui-accordion-header{
+    padding: 15px 20px;
+    font-weight: 600;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+.ui-accordion .ui-accordion-header{
+    background-color:transparent;
+    &.ui-accordion-header-active{
+        background: $bg-primary;
+    }
+    &:focus{
+        outline: 0!important;
+    }
+}
+
+/**dialogs**/
+.ui-dialog{
+    z-index: 9999;
+}
+.ui-dialog-titlebar.ui-widget-header{
+    background: transparent;
+    border: 0px;
+    position: relative;
+    padding: 10px 15px 0;
+    .ui-button{
+        border: 0px;
+        background: transparent;
+    }
+}
+.ui-dialog .ui-dialog-content{
+    padding: 10px 15px;
+}
+
+/**draggables**/
+.draggable-element{
+    width: 90px;
+    height: 90px;
+    @include border-radius(5px);
+    background-color: rgba(255,255,255,0.1);
+    border: 2px solid  rgba(255,255,255,0.4);
+    color: #aeaeae;
+    font-size: 12px;
+    vertical-align: middle;
+    margin: auto;
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    text-align: center;
+    line-height: 90px;
+    margin-right: 15px;
+}
+.droppable-target-element{
+    width: 120px;
+    height: 120px;
+    z-index: 9;
+    background: $bg-primary;
+    color: #fff;
+    border-color: $bg-primary;
+}
+
+/**selectable**/
+#selectable .ui-selecting { background: $bg-primary; }
+#selectable .ui-selected { background:  $bg-primary; color: white; }
+#selectable { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+#selectable li { margin: 3px; padding: 0.4em; height: auto; display: block; }
+
+/**progress bars**/
+.ui-progressbar .ui-progressbar-value{
+    margin: 0px;
+    border: 0px;
+}
+.ui-progressbar {
+    height: 18px;
+}
+.ui-progressbar-primary{
+    .ui-progressbar-value{
+        background-color: $bg-primary;
+    }
+}
+.ui-progressbar-indigo{
+    .ui-progressbar-value{
+        background-color: $bg-indigo;
+    }
+}
+.ui-progressbar-teal{
+    .ui-progressbar-value{
+        background-color: $bg-teal;
+    }
+}
+.ui-progressbar-warning{
+    .ui-progressbar-value{
+        background-color: $bg-warning;
+    }
+}
+.ui-progressbar-danger{
+    .ui-progressbar-value{
+        background-color: $bg-danger;
+    }
+}
+.ui-progressbar-success{
+    .ui-progressbar-value{
+        background-color: $bg-success;
+    }
+}
+.ui-widget.ui-widget-content.ui-progressbar {
+    border: 1px solid #ddd;
+}
+
+/* UI Sortable */
+.ui-sortable .sortable-title {
+  cursor: move;
+}
+.ui-sortable-placeholder{
+  border: 1px dashed rgba(255,255,255,0.2) !important;
+  visibility: visible !important;
+  background: rgba(255,255,255,0.1);
+}
+.panel.ui-sortable-placeholder {
+  margin: 0 0 23px !important;
+}

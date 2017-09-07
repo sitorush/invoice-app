@@ -1,0 +1,80 @@
+/*
+Welcome page scss
+*/
+.page-intro{
+    background: #fff;
+}
+.intro-header{
+    padding: 100px 0;
+    margin-bottom:60px;
+    h1{
+        text-transform: capitalize;
+        font-weight:300;
+        color:rgba(255,255,255,0.7);
+        font-size:44px;
+        line-height:54px;
+        span{
+            font-weight: 700;
+            color:rgba(255,255,255,1);
+        }
+    }
+    .lead{
+        margin-bottom: 0;
+        color: #fff;
+        opacity: 0.9;
+    }
+}
+.intro-box{
+    display: block;
+    position: relative;
+    @include transition(all 0.3s);
+    overflow: hidden;
+    img{
+        @include transition(all 0.3s);
+    }
+    span{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -84px;
+        margin-top: 0px;
+        @include transition(all 0.3s);
+        opacity: 0;
+    }
+    &:hover{
+        img{
+            opacity: 0.7;
+        }
+        span{
+            opacity: 1;
+            margin-top: -22px;
+        }
+    }
+}
+.subtitle{
+    text-transform: capitalize;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+.intro-features{
+    padding: 80px 0;
+    background: #f5f5f5;
+    padding-bottom: 50px;
+    i{
+        font-size: 30px;
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+}
+.intro-footer{
+    padding: 40px 0;
+    background: #222;
+    p{
+        color: #fff;
+        margin-bottom: 0;
+        font-weight: 300;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+}

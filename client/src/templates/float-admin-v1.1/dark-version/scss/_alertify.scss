@@ -1,0 +1,13 @@
+/*
+Alertify alerts custom 
+*/
+.alertify .ajs-dialog{
+    border: 0px;
+}
+.ajs-button{
+    border: 0px;
+    &.ajs-ok{
+        background: $bg-primary;
+        color: #fff;
+    }
+}

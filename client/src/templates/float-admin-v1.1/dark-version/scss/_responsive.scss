@@ -1,0 +1,94 @@
+/*
+Template resonsive css
+*/
+@media(max-width:1169px){
+    .cd-timeline-content .cd-date{
+        float: none;
+    }
+    .cd-timeline-content h2 {
+    font-size: 20px;
+    line-height: 20px;
+}
+}
+@media(max-width:991px){
+    .main-content{
+        margin-left: 0px;
+    }
+    .float-navigation{
+       margin-left: -220px;
+        z-index: 3;
+    }
+    body.nav-toggle .float-navigation{
+        margin-left: 0;
+    }
+    .top-bar{
+        z-index: 4;
+    }
+    .admin-logo{
+        width: auto;
+        margin-left: 15px;
+    }
+    .top-bar.left-nav-toggle a i{
+        top: 4px;
+    }
+}
+@media(max-width:767px){
+    div.dataTables_paginate {
+    margin-top: 10px;
+    white-space: pre-wrap;
+}
+.admin-logo {
+    width: 60px;
+    margin-left: -0px;
+    img{
+        width: 100%;
+    }
+}
+.left-nav-toggle{
+    float: right;
+}
+.page-header{
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    h4{
+        margin-bottom: 10px;
+    }
+    .text-right{
+        text-align: center;
+    }
+}
+.top-right-nav{
+    padding-right: 0px;
+}
+.main-content{
+    padding: 15px 15px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.footer{
+    text-align: center;
+}
+body.layout-horizontal .navbar-default .navbar-nav > li > a i{
+    display: inline-block;
+    margin-right: 5px;
+}
+body.layout-horizontal .dropdown-mega .row{
+    margin: 0px;
+}
+body.layout-horizontal .dropdown-mega .col-sm-6{
+    padding: 0px;
+}
+body.layout-horizontal .dropdown-menu.dropdown-mega ul > li > a, body.layout-horizontal .dropdown-menu > li > a{
+    color: rgba(0,0,0,0.5);
+    &:hover{
+      color: rgba(0,0,0,1);
+    }
+}
+.navbar-nav .open .dropdown-menu .dropdown-header, .navbar-nav .open .dropdown-menu>li>a {
+    padding: 9px 20px;
+}
+.ui-dialog{
+    width: 90%!important;
+}
+}

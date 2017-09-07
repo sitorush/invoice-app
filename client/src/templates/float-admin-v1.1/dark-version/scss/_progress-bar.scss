@@ -1,0 +1,36 @@
+/*
+Progress bars
+*/
+.progress,.progress-bar{
+    @include box-shadow(none);
+    @include border-radius(0px);
+}
+.progress-mini, .progress-mini .progress-bar {
+    height: 5px;
+    margin-bottom: 5px;
+}
+.progress-xs, .progress-xs .progress-bar {
+    height: 2px;
+    margin-bottom: 2px;
+}
+.progress-bar.progress-bar-danger{
+    background-color: $bg-danger;
+}
+.progress-bar.progress-bar-warning{
+    background-color: $bg-warning;
+}
+.progress-bar.progress-bar-success{
+    background-color: $bg-success;
+}
+.progress-bar.progress-bar-indigo{
+    background-color: $bg-indigo;
+}
+.progress-bar.progress-bar-teal{
+    background-color: $bg-teal;
+}
+.progress-bar.progress-bar-info{
+    background-color: $bg-info;
+}
+.progress-bar{
+    background-color: $bg-primary;
+}

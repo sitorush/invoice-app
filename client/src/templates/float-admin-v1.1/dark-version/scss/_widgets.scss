@@ -1,0 +1,186 @@
+/*
+Widgets
+*/
+.widget {
+    @include border-radius(2px);
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    background:#202e44;
+     border:1px solid rgba(255,255,255,0.1);
+    h2{
+        margin-bottom: 0px;
+    }
+    .thumb-over{
+        position: relative;
+        margin-top: -50px;
+        width:100px;
+        margin-left: auto;
+        margin-right:auto;
+        img{
+            border: 3px solid #fff;
+        }
+    }
+    .progress{
+        margin-bottom: 20px;
+    }
+}
+.widget .flot-chart {
+    height: 100px;
+}
+.widget ul li a{
+    color:#fff;
+    opacity: 0.8;
+    &:hover{
+        opacity: 1;
+    }
+}
+/**chat room*/
+.chat-list{
+    .chat-element{
+        margin-bottom: 20px;
+
+        a img{
+            width: 38px;
+            height: 38px;
+            margin-right: 10px;
+        }
+        .media-body{
+            padding-left:15px;
+            .speech-box{
+                background:rgba(255,255,255,0.1);
+                position: relative;
+                padding: 10px 15px;
+                @include border-radius(3px);
+                &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    left: 0;
+                    top: 0;
+                    border-top: 7px solid transparent;
+                    border-bottom: 7px solid transparent;
+                    border-right: 7px solid rgba(255,255,255,0.1);
+                    margin: 15px 0 0 -6px;
+                }
+            }
+        }
+        &.right{
+            a img{
+                margin-right: 0px;
+                margin-left: 10px;
+            }
+            .media-body{
+                padding-left:0px;
+                padding-right:15px;
+                .speech-box{
+                    background-color:rgba(255,255,255,0.15);
+                    &:before{
+                        left: auto;
+                        right: 0;
+                        border-top: 7px solid transparent;
+                        border-bottom: 7px solid transparent;
+                        border-left: 7px solid rgba(255,255,255,0.15);
+                        border-right: 0;
+                        margin: 15px -6px 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/**todo list**/
+.todo-list {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    >li{
+        background: transparent;
+        color: inherit;
+        margin-bottom: 2px;
+        padding: 10px;
+        span{
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+    }
+}
+.friends-group{
+    a{
+        margin: 3px;
+        display: block;
+        float:left;
+        width:40px;
+        &.more{
+            width: 40px;
+            height: 40px;
+            background: #eee;
+            line-height: 40px;
+            text-align: center;
+            @include border-radius(50%);
+            color:#999;
+            &:hover{
+                background: $bg-primary;
+                color:#fff;
+            }
+        }
+    }
+}
+.comments-list{
+    >li{
+        border-bottom:1px solid rgba(255,255,255,0.1);
+        padding-bottom:10px;
+        margin-bottom:15px;
+        img{
+            float: left;
+            margin-right: 20px;
+        }
+        .content{
+            overflow: hidden;
+            ul{
+                margin: 0;
+                padding: 0;
+                li>a{
+                    color: #999;
+                    &:hover{
+                        color: $bg-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+.widget-chart{
+    .widget-title{
+        border-bottom:1px solid rgba(255,255,255,0.1);
+        border-image: none;
+        color: inherit;
+        margin-bottom: 0;
+        padding: 15px;
+    }
+    .widget-content{
+        color: inherit;
+        padding: 15px 20px 20px 20px;
+        position: relative;
+       
+    }
+    .sparkline-chart{
+        padding: 5px;
+    }
+}
+.stat-list{
+    .stat-percent {
+        float: right;
+    }
+    li {
+        margin-top: 15px;
+        position: relative;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}

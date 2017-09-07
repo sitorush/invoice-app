@@ -1,0 +1,132 @@
+/*
+Right sidebar
+*/
+.nav-tab-panel{
+    margin:0;
+    padding:0;
+    background:#202e44;
+    >li{
+     padding: 0px;
+    width: 50%;
+    margin: 0;
+    display: block;
+    float: left;
+        >a{
+            display: block;
+            padding: 14px 15px;
+            text-align: center;
+            background: #202e44;
+            font-size:14px;
+            text-transform: capitalize;
+            color: #fff;
+            border-bottom: 2px solid transparent;
+        }
+        &.active a{
+            border-bottom-color: $bg-primary;
+            color: $bg-primary;
+        }
+    }
+}
+.right_sidebar{
+    position: fixed;
+    right: 0px;
+    margin-right: -270px;
+    top: 60px;
+    z-index: 9999;
+    width: 270px;
+    border-left: 1px solid rgba(255,255,255,0.1);
+    @include transition(margin-right 0.3s);
+    height: 100%;
+    background: $bg-dark;
+    padding-bottom: 20px;
+    >.nano>.nano-content>div{
+        padding-bottom: 40px;
+    }
+}
+.right_sidebar.right-sidebar-toggle{
+    margin-right: 0px;
+}
+.sidebar-list{
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    li {
+        border-bottom: 1px solid  rgba(255,255,255,0.1);
+        padding: 15px 20px;
+        list-style: none;
+        >a{
+            color: inherit;
+            display:block;
+            h4{
+                margin-bottom: 5px;
+                    font-weight: 500;
+    font-size: 15px;
+            }
+            .small{
+                margin-top: 0px;
+                margin-bottom: 5px;
+            }
+        }
+        &.sidebar-title{
+            background: transparent;
+            h3{
+                margin-bottom: 0px;
+                text-transform: capitalize;
+            }
+            &:hover{
+                background: rgba(255,255,255,0.1);
+            }
+        }
+        &:hover{
+           background: rgba(255,255,255,0.1);
+        }
+    }
+    &.projects-list{
+        >li{
+            padding: 15px 0px;
+            &:hover{
+                background: transparent;
+            }
+        }
+    }
+}
+
+.sidebar-contact-list{
+    li{
+        padding: 10px 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        @include transition(all 0.3s);
+        a{
+            display: block;
+            &:hover{
+                color: $light-primary;
+            }
+        }
+        &:hover{
+            background: rgba(255,255,255,0.1);
+        }
+        &:last-child{
+            border-bottom: 0px;
+            &:hover{
+                background: transparent;
+            }
+        }
+        .btn{
+            display: inline-block;
+            &:hover{
+                color: #fff;
+            }
+        }
+    }
+    .media-box-object{
+        width: 50px;
+        margin-right: 15px;
+    }
+    .media-box-body{
+        overflow: hidden;
+        strong{
+            font-weight: 500;
+        }
+    }
+}
+

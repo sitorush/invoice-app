@@ -1,0 +1,14 @@
+/*
+Page blog styles
+*/
+
+.blog-box{
+    a h4{
+        &:hover{
+            color: $bg-primary;
+        }
+    }
+    .media-body{
+        padding-top: 5px;
+    }
+}

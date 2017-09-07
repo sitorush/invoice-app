@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Float Docs</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!-- Static navbar -->
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="images/logo-dark.png" alt="logo"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Basic</a></li>
+                        <li class="active"><a href="html-structure.html">Html Structure</a></li>
+                        <li><a href="css.html">Css</a></li>
+                        <li><a href="jquery.html">Jquery</a></li>
+                        <li><a href="plugins.html">Plugins</a></li>
+                        <li><a href="changelog.html">Changelog</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="./">Buy For $20</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+        </nav>
+
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Html structure</h1>
+                <p>
+                    Including left navbar, top bar, and right sidebar structure
+                </p>  
+                <p>Support Url: <a href='https://wrapbootstrap.com/user/design_mylife'>Design_Mylife</a></p>
+                <p>Support Email: <a>mylifedesign143@gmail.com</a></p>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <h3 class="main-title">03. HTML Structure</h3>
+            <h4>Top bar</h4>
+            <p>
+                <code>.top-bar</code> common class
+                <br>
+                <code>.light-top-bar</code> use this class for light top bar
+                <br>
+                <code>.bg-dark, .bg-primary, .bg-teal, .bg-indigo etc</code> Classes are you can use for top-bar background-color
+            </p>
+            <hr>
+            <h4>Main left navigation</h4>
+            <p>
+                <code>.light-navigation</code> Use this class for light navigation
+                <br>
+                <code>.bg-dark</code> Class for dark left navigation
+                <br>
+                <code>.bg-teal, .bg-indigo, .bg-success etc.</code> Classes for colored left navigation
+            </p>
+            <pre>                    <code>
+ 
+  <span class="c">&lt;!-- Top Bar start --&gt;</span>
+  &lt;div <span class="na">id=<span class="s">""</span></span> <span class="na">class=</span><span class="s">"top-bar light-top-bar"</span>&gt;
+                            
+  &lt;/div&gt;
+  <span class="c">&lt;!-- Top bar end --&gt;</span>
+
+
+
+  <span class="c">&lt;!-- Right panel start --&gt;</span>
+  &lt;nav <span class="na">id=</span><span class="s">"right-sidebar-toggle"</span> <span class="na">class=</span><span class="s">"right_sidebar"</span>&gt;
+                            
+  &lt;/nav&gt;
+  <span class="c">&lt;!-- Right panel end --&gt;</span>
+
+
+
+  <span class="c">&lt;!-- Left navigation start --&gt;</span>
+  &lt;aside <span class="na">id=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"float-navigation light-navigation"</span>&gt;
+                            
+  &lt;/aside&gt;
+  <span class="c">&lt;!-- Left navigation End --&gt;</span>
+
+
+
+  <span class="c">&lt;!-- Main content --&gt;</span>
+  &lt;section <span class="na">id=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"main-content"</span>&gt;
+                 
+         <span class="c">&lt;!-- Page Breadcrumb --&gt;</span>
+          &lt;div <span class="na">id=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"page-header"</span>&gt;
+                            
+          &lt;/div&gt;
+         <span class="c">&lt;!-- Page Breadcrumb End --&gt;</span>     
+                     
+  &lt;/section&gt;
+  <span class="c">&lt;!-- Main content End --&gt;</span>
+
+  <span class="c">&lt;!-- Footer start --&gt;</span>
+  &lt;footer <span class="na">id=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"footer"</span>&gt;
+                            
+  &lt;/footer&gt;
+  <span class="c">&lt;!-- Footer End --&gt;</span>
+
+</code>
+            </pre>
+
+
+        </div>
+        <footer>
+            <div class="container">
+                If you steel face a problem or having issues to using this template, Don't worry, we are happy to help you, Feel free to leave a html related questions <a href='https://wrapbootstrap.com/user/design_mylife' target="_blank">here</a> or send an email <a>mylifedesign143@gmail.com</a>
+            </div>
+        </footer>    
+    </body>
+</html>
