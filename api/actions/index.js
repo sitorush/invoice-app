@@ -1,5 +1,5 @@
 const client = require('./client').default;
 const invoice = require('./invoice').default;
-const setting = require('./setting').default;
+const settings = require('./settings').default;
 
-module.exports = { client, invoice, setting };
+module.exports = { client, invoice, settings };

@@ -9,22 +9,22 @@ import * as clientActions from '../../modules/client';
 import { required, email } from '../../utils/validation';
 import { renderFields } from '../../utils/form';
 
-export class FormClient extends Component {
+export class FormSettings extends Component {
   render() {
     const { handleSubmit } = this.props;
 
     const colA = [
-      { name: 'clientName', label: 'Name' },
-      { name: 'clientEmail', label: 'Email address', validate: [required, email], type: 'email' },
-      { name: 'addressLine1', label: 'Address line 1' },
-      { name: 'addressLine2', label: 'Address line 2' }
+      { name: 'companyName', label: 'Company name' },
+      { name: 'companyEmail', label: 'Email address', validate: [required, email], type: 'email' },
+      { name: 'companyAddress', label: 'Address' },
+      { name: 'companyPhone', label: 'Phone' },
+      { name: 'companyMobile', label: 'Mobile' }
     ]
 
     const colB = [
-      { name: 'addressTown', label: 'Town' },
-      { name: 'addressPostcode', label: 'Postcode' },
-      { name: 'addressCounty', label: 'County/State' },
-      { name: 'addressCountry', label: 'Country' }
+      { name: 'companyBankName', label: 'Bank name' },
+      { name: 'companySortcode', label: 'Sortcode' },
+      { name: 'companyAccountNumber', label: 'Account number' }
     ]
 
     return (
@@ -43,7 +43,8 @@ export class FormClient extends Component {
             <div className="col-md-3 col-md-offset-9">
               <div>
                 <Button type="submit" className="btn btn-primary">Save</Button>
-                <Link to="/client"><Button type="button" className="btn btn-default" style={{ marginLeft: '10px' }}>Cancel</Button></Link>
+                <Link to="/"><Button type="button" className="btn btn-default" 
+                  style={{ marginLeft: '10px' }}>Cancel</Button></Link>
               </div>
             </div>
           </div>
@@ -53,13 +54,13 @@ export class FormClient extends Component {
   }
 }
 
-FormClient.propTypes = {
+FormSettings.propTypes = {
   handleSubmit: PropTypes.func.isRequired
 };
 
-FormClient = reduxForm({ form: 'client' })(FormClient);
+FormSettings = reduxForm({ form: 'settings' })(FormSettings);
 
 export default connect(
   () => ({}),
   dispatch => bindActionCreators(clientActions, dispatch)
-)(FormClient);
+)(FormSettings);

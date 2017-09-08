@@ -7,6 +7,7 @@ import Client from '../client'
 import ClientCreate from '../client/create'
 import ClientEdit from '../client/edit'
 import Home from '../home'
+import Settings from '../settings'
 
 export default class App extends Component {
   render() {
@@ -24,13 +25,12 @@ export default class App extends Component {
           </div>
         </div>
         <Navbar staticTop>
-          <div className="container">
-            <div id="navbar" className="navbar-collapse collapse">
-              <Nav>
-                <IndexLinkContainer to="/"><NavItem eventKey={1}><i className="icon-home"></i> Home</NavItem></IndexLinkContainer>
-                <LinkContainer to="/client"><NavItem eventKey={2}><i className="icon-bag"></i> Client</NavItem></LinkContainer>
-              </Nav>
-            </div>
+          <div id="navbar" className="navbar-collapse collapse">
+            <Nav>
+              <IndexLinkContainer to="/"><NavItem eventKey={1}><i className="icon-home"></i> Home</NavItem></IndexLinkContainer>
+              <LinkContainer to="/client"><NavItem eventKey={2}><i className="icon-bag"></i> Client</NavItem></LinkContainer>
+              <LinkContainer to="/settings"><NavItem eventKey={3}><i className="icon-settings"></i> Settings</NavItem></LinkContainer>
+            </Nav>
           </div>
         </Navbar>
         
@@ -41,6 +41,7 @@ export default class App extends Component {
               <Route exact path="/client" component={Client} />
               <Route exact path="/client/create" component={ClientCreate} />
               <Route exact path={"/client/edit/:id"} component={ClientEdit} />
+              <Route exact path="/settings" component={Settings} />
             </div>
           </div>
           <footer className="footer">

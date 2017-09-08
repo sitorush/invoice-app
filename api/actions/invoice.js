@@ -1,7 +1,8 @@
 const { ObjectID } = require('mongodb');
 
-const clientCollection = require('../helper/clientCollection');
-const invoiceCollection = require('../helper/invoiceCollection');
+const db = require('../helper/db').default;
+const clientCollection = db('client');
+const invoiceCollection = db('invoice');
 
 const getInvoice = function (req, params) {
   return invoiceCollection.find(req).then(

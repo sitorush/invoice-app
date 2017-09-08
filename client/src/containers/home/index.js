@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 const Home = props => (
-  <div>
+  <div className="col-xs-12">
     <h1>Home</h1>
     <p>Work in progress</p>
   </div>

@@ -7,7 +7,6 @@ exports.mapUrl = function(availableActions = {}, url = []) {
   }
   /*eslint-disable */
   const reducer = (prev, current) => {
-    
     if (prev.action && prev.action[current]) {
       return {action: prev.action[current], params: []}; // go deeper
     } else {

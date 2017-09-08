@@ -7,8 +7,6 @@ import { push } from 'react-router-redux';
 
 export class ClientCreate extends Component {
   componentWillReceiveProps(nextProps) {
-    console.log('next props ', nextProps);
-    
     if (nextProps.insertSuccess) {
       this.props.pushState('/client');
     }

@@ -87,7 +87,7 @@ export function findClient(id) {
   return dispatch => {
     dispatch({ type: FIND_LOAD })
 
-    return fetchUrl('/client', { method: 'GET', data: { id } })
+    return fetchUrl(`/client/${id}`, { method: 'GET' })
       .then((result) => { dispatch({ type: FIND_SUCCESS, result }) })
       .catch(() => dispatch({ type: REQUEST_FAIL }))
   }

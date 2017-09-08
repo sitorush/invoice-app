@@ -1,16 +1,12 @@
-const { ObjectID } = require('mongodb');
-const clientCollection = require('../helper/clientCollection');
+const db = require('../helper/db').default;
+const clientCollection = db('clients');
 
 const getClient = function (req) {
-  return clientCollection.find(req, req.query.id).then(
-    (results) => Promise.resolve(results),
-    (ex) => Promise.reject(ex));
+  return clientCollection.findAll(req)
 }
 
 const saveClient = function (req) {
-  if (req.body._id) {
-    req.body._id = ObjectID(req.body._id);
-  } else {
+  if (!req.body._id) {
     req.body.invNumber = 0;
   }
   // TODO validate here
@@ -32,11 +28,20 @@ const deleteClient = function (req) {
     (ex) => Promise.reject(ex));
 }
 
+const findClient = function (req, params) {
+  return clientCollection.findOne(req, params[0])
+}
+
 exports.default = function (...args) {
-  const [req] = args;
+  const [req, params] = args;
+
   switch (req.method) {
     case 'GET':
-      return getClient(...args);
+      if (params.length > 0) { // get one 
+        return findClient(...args);
+      } else {
+        return getClient(...args);
+      }
     case 'PUT':
       return saveClient(...args);
     case 'POST':
