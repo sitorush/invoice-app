@@ -1,12 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Client } from './index';
+import Footer from './index';
 
-describe('Client', () => {
+describe('Footer', () => {
   it('renders without crashing', () => {
     shallow(
-      <Client />,
+      <Footer />,
     );
   });
 });
-

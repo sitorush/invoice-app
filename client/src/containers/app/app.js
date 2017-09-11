@@ -8,6 +8,9 @@ import ClientCreate from '../client/create'
 import ClientEdit from '../client/edit'
 import Home from '../home'
 import Settings from '../settings'
+import Footer from '../../components/footer'
+import Header from '../../components/header'
+
 
 export default class App extends Component {
   render() {
@@ -17,9 +20,7 @@ export default class App extends Component {
           <div className="container">
             <div className="row">
               <div className="col-xs-12">
-                <Link to="/" className="admin-logo">
-                  <h1>Invoice App</h1>
-                </Link>
+                <Header />
               </div>
             </div>
           </div>
@@ -28,6 +29,7 @@ export default class App extends Component {
           <div id="navbar" className="navbar-collapse collapse">
             <Nav>
               <IndexLinkContainer to="/"><NavItem eventKey={1}><i className="icon-home"></i> Home</NavItem></IndexLinkContainer>
+              <LinkContainer to="/invoice"><NavItem eventKey={2}><i className="icon-list"></i> Invoice</NavItem></LinkContainer>
               <LinkContainer to="/client"><NavItem eventKey={2}><i className="icon-bag"></i> Client</NavItem></LinkContainer>
               <LinkContainer to="/settings"><NavItem eventKey={3}><i className="icon-settings"></i> Settings</NavItem></LinkContainer>
             </Nav>
@@ -44,11 +46,7 @@ export default class App extends Component {
               <Route exact path="/settings" component={Settings} />
             </div>
           </div>
-          <footer className="footer">
-            <div className="container text-center">
-              <span>Copyright &copy; 2017. Sitorus Internet</span>
-            </div>
-          </footer>
+          <Footer />
         </div>
       </div>
     );
