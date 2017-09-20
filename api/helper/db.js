@@ -20,24 +20,23 @@ exports.default = function (collection) {
   function findOne(req, id) {
     const db = req.app.get('database');
   
-    if (!id) throw new Error('Please provide valid id.')
-
+    if (!id) throw new Error('Please provide valid id.');
     return db.collection(collectionName).findOne({ _id: ObjectID(id) });
   }
   
-  function save(req) {
+  function save(req, data) {
     const db = req.app.get('database');
-  
     return new Promise(function(resolve, reject) {
-      let { body } = req; 
-      if (body._id) {
-        body._id = ObjectID(body._id);
+      // use data argument if exist, or request.body as second option
+      let payload = data || req.body;
+      if (payload._id) {
+        payload._id = ObjectID(payload._id);
       }
-      db.collection(collectionName).save(body, (err) => {
+      db.collection(collectionName).save(payload, (err, record) => {
         if (err) {
           reject(err);
         } else {
-          resolve();
+          resolve(payload);
         }
       });
     });

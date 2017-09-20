@@ -35,6 +35,13 @@ export function integer(value) {
   }
 }
 
+export function intOrFloat(value) {
+  const pattern = /^(?=.*\d)\d*(?:\.\d\d?)?$/;
+  if (!pattern.test(value)) {
+    return 'Must be an integer or floating point, eg 1.50';
+  }
+}
+
 export function oneOf(enumeration) {
   return value => {
     if (!~enumeration.indexOf(value)) {

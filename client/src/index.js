@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'react-router-redux'
 import store, { history } from './store'
-import App from './containers/app/app'
+import App from './components/app/app'
 
 
 import './templates/float-admin-v1.1/light-version/plugins/bootstrap/css/bootstrap.min.css'

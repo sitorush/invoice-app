@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import FormClient from '../../components/form-client';
+import ClientForm from './component/form';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { initialize } from 'redux-form';
@@ -30,7 +30,7 @@ export class ClientEdit extends Component {
 
     return (
       <div>
-        <FormClient onSubmit={updateClient} />
+        <ClientForm onSubmit={updateClient} />
       </div>
     );
   }

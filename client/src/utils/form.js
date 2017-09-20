@@ -4,7 +4,7 @@ import { required } from './validation';
 
 export const renderInput = ({ input, label, type, meta: { error, touched } }) =>
   <div className="form-group">
-    <label htmlFor="clientName">{label}</label>
+    {label && <label htmlFor="clientName">{label}</label>}
     <input {...input} className="form-control" type={type} />
     {error && touched && <div className="text-danger">{error}</div>}
   </div>;
@@ -17,3 +17,4 @@ export const renderFields = (fields) =>
     component={renderInput} 
     {...field} 
   />)
+  

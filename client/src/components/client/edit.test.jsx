@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { ClientEdit } from './edit';
 
-describe('ClientCreate', () => {
+describe('ClientEdit', () => {
   it('renders without crashing', () => {
     const noop = () => {}
     const props = {

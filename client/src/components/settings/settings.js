@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { initialize } from 'redux-form';
 import { push } from 'react-router-redux';
-import FormSettings from '../../components/form-settings'
+import SettingsForm from './component/form'
 import { saveSettings, getSettings } from '../../modules/settings'
 
 export class Settings extends Component {
@@ -37,7 +37,7 @@ export class Settings extends Component {
             <h1>Settings</h1>
           </div>
           <div className="panel-body">
-            <FormSettings onSubmit={saveSettings} />
+            <SettingsForm onSubmit={saveSettings} />
           </div>
         </div>
       </div>

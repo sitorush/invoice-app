@@ -20,10 +20,6 @@ const initialState = {
 export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
     case REMOVE_SUCCESS:
-      return {
-        ...state,
-        listing: action.result
-      };
     case LISTING_SUCCESS:
       return {
         ...state,
@@ -62,9 +58,9 @@ export const insertClient = (data) => {
     dispatch({ type: INSERT_NEW })
 
     return fetchUrl('/client', {
-      method: 'POST',
-      data
-    })
+        method: 'POST',
+        data
+      })
       .then((res) => dispatch({ type: INSERT_SUCCESS }))
       .catch(() => dispatch({ type: REQUEST_FAIL }))
   }

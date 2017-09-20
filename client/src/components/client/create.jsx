@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import FormClient from '../../components/form-client';
+import ClientForm from './component/form';
 import { connect } from 'react-redux';
 import { insertClient } from '../../modules/client';
 import { push } from 'react-router-redux';
@@ -21,7 +21,7 @@ export class ClientCreate extends Component {
               <h2>Insert client details</h2>
             </div>
             <div className="panel-body">
-               <FormClient onSubmit={insertClient} /> 
+               <ClientForm onSubmit={insertClient} /> 
             </div>
         </div>
       </div>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { removeClient } from '../../modules/client';
+import { removeClient } from '../../../modules/client';
 import { bindActionCreators } from 'redux';
 
 export class ClientListing extends Component {

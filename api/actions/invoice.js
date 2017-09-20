@@ -1,11 +1,11 @@
 const { ObjectID } = require('mongodb');
 
 const db = require('../helper/db').default;
-const clientCollection = db('client');
-const invoiceCollection = db('invoice');
+const clientCollection = db('clients');
+const invoiceCollection = db('invoices');
 
 const getInvoice = function (req, params) {
-  return invoiceCollection.find(req).then(
+  return invoiceCollection.findAll(req).then(
     (invoices) => Promise.resolve(invoices),
     (ex) => {
       console.error(ex);
@@ -14,26 +14,33 @@ const getInvoice = function (req, params) {
 }
 
 const postInvoice = function (req) {
-  if (req.body._id) { // EDIT
-    req.body._id = ObjectID(req.body._id);
-  }
-
-  return clientCollection.find(req, req.body.client)
-    .then((client) => {
-      if (!client.invNumber) {
-        client.invNumber = 0;
+  // check client last invoice number
+  return clientCollection.findOne(req, req.body.client._id)
+    .then(
+      (client) => {
+        if (!client.invNumber) {
+          client.invNumber = 0;
+        }
+        client.invNumber++;
+        return clientCollection.save(req, client);
       }
-
-      client.invNumber++;
-
-      req.body.invNumber = client.invNumber;
-      return clientCollection.save(req, client);
-    })
-    .then(() => invoiceCollection.save(req))
-    .then(() => Promise.resolve(), (ex) => {
-      console.error(ex);
-      return Promise.reject(ex);
-    });
+    )
+    .then(
+      (client) => {
+        invoiceCollection.save(req, {
+          invoiceItems: req.body.invoiceItems,
+          client: client,
+          _id: ObjectID(req.body._id)
+        })
+      }
+    )
+    .then(
+      () => Promise.resolve((res) => res.status(204).json()), 
+      (ex) => {
+        console.error(ex);
+        return Promise.reject(ex);
+      }
+    );
 }
 
 const deleteInvoice = function (req) {
@@ -45,12 +52,21 @@ const deleteInvoice = function (req) {
     });
 }
 
+const findInvoice = function (req, params) {
+  return invoiceCollection.findOne(req, params[0])
+}
+
 exports.default = function load(...args) {
-  const [req] = args;
+  const [req, params] = args;
   switch (req.method) {
     case 'GET':
-      return getInvoice(...args);
+      if (params.length > 0) {
+        return findInvoice(...args);
+      } else {
+        return getInvoice(...args);
+      }
     case 'POST':
+    case 'PUT':
       return postInvoice(...args);
     case 'DELETE':
       return deleteInvoice(...args);

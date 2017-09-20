@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap'
 import { Navbar, Nav, NavItem } from 'react-bootstrap'
 
-import Client from '../client'
+import ClientHome from '../client/home'
 import ClientCreate from '../client/create'
 import ClientEdit from '../client/edit'
+
+import InvoiceCreate from '../invoice/create'
+import InvoiceEdit from '../invoice/edit'
+import InvoiceHome from '../invoice/home'
+
 import Home from '../home'
-import Settings from '../settings'
+import Settings from '../settings/settings'
 import Footer from '../../components/footer'
 import Header from '../../components/header'
 
@@ -40,9 +45,15 @@ export default class App extends Component {
           <div className="container">
             <div className="row">
               <Route exact path="/" component={Home} />
-              <Route exact path="/client" component={Client} />
+              
+              <Route exact path="/client" component={ClientHome} />
               <Route exact path="/client/create" component={ClientCreate} />
               <Route exact path={"/client/edit/:id"} component={ClientEdit} />
+
+              <Route exact path="/invoice" component={InvoiceHome} />
+              <Route exact path="/invoice/create" component={InvoiceCreate} />
+              <Route exact path="/invoice/edit/:id" component={InvoiceEdit} />
+              
               <Route exact path="/settings" component={Settings} />
             </div>
           </div>
